@@ -3,117 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JHCSC - Class File Repository</title>
+    <title>JHCSC - Compact File Repository</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8;
+            background-color: #f8fafc; /* Lighter gray background */
         }
-        .theme-bg {
-            background-color: #05A65A;
+        /* Custom theme colors */
+        .theme-bg { background-color: #05A65A; }
+        .theme-text { color: #05A65A; }
+        .theme-border { border-color: #05A65A; }
+        .theme-bg-subtle { background-color: #e6f6ec; }
+        .theme-text-subtle { color: #038a4a; }
+
+        /* Custom shadow for a subtle lift */
+        .card-shadow {
+            box-shadow: 0 4px D6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
         }
-        .theme-text {
-            color: #05A65A;
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
         }
-        tbody td {
-            vertical-align: middle;
+
+        /* Smooth transitions */
+        .transition-all-300 {
+            transition: all 0.3s ease-in-out;
         }
     </style>
 </head>
-<body class="bg-gray-100 p-4">
+<body class="antialiased text-slate-800">
 
-    <div class="w-full max-w-5xl mx-auto">
-        <!-- Header -->
-        <div class="mb-4">
-            <h1 class="text-2xl font-bold text-gray-800">JHCSC File Repository</h1>
-            <p class="text-sm text-gray-500">
-                <span class="font-semibold">School:</span> J.H. Cerilles State College | 
-                <span class="font-semibold">Subject:</span> Modern History - Group 4
-            </p>
-        </div>
-
-        <!-- File Log Table Container -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="overflow-x-auto">
-                <table class="w-full text-sm text-left text-gray-600">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 border-b">
-                        <tr>
-                            <th scope="col" class="px-4 py-2">
-                                File Details
-                            </th>
-                            <th scope="col" class="px-4 py-2">
-                                Date Added
-                            </th>
-                            <th scope="col" class="px-4 py-2 text-center">
-                                Action
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y">
-                        <!-- File Item 1: PPT Report -->
-                        <tr class="bg-white hover:bg-gray-50 transition-colors">
-                            <td class="px-4 py-3">
-                                <div class="flex items-start gap-3">
-                                    <div class="flex-shrink-0 mt-0.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2h6v4H7V5zm8 6H5v2h10v-2z" clip-rule="evenodd" /></svg>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold text-sm text-gray-900">The American Revolution_Report.ppt</p>
-                                        <p class="text-xs text-gray-500 mt-1">Key points, visuals, and data from our group report.</p>
-                                        <!-- Notice -->
-                                        <div class="mt-2 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-1.5 rounded-r-md text-xs" role="alert">
-                                            <span class="font-semibold">Note:</span> Differs from the video presentation.
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="px-4 py-3 text-xs font-medium text-gray-600">
-                                Sep 15, 2025
-                                <span class="block text-gray-400">10:53 PM</span>
-                            </td>
-                            <td class="px-4 py-3 text-center">
-                                <a href="https://example.com" target="_blank" class="inline-flex items-center gap-1.5 theme-bg text-white font-bold py-1.5 px-3 rounded-md shadow-sm hover:opacity-90 transition-opacity text-xs">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                    <span>Download</span>
-                                </a>
-                            </td>
-                        </tr>
-
-                        <!-- File Item 2: DOCX Outline -->
-                         <tr class="bg-white hover:bg-gray-50 transition-colors">
-                            <td class="px-4 py-3">
-                                <div class="flex items-start gap-3">
-                                    <div class="flex-shrink-0 mt-0.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" /></svg>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold text-sm text-gray-900">Project_Outline.docx</p>
-                                        <p class="text-xs text-gray-500 mt-1">The initial outline and structural plan for the group report.</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="px-4 py-3 text-xs font-medium text-gray-600">
-                                Sep 12, 2025
-                                <span class="block text-gray-400">3:15 PM</span>
-                            </td>
-                            <td class="px-4 py-3 text-center">
-                                <a href="https://example.com" target="_blank" class="inline-flex items-center gap-1.5 theme-bg text-white font-bold py-1.5 px-3 rounded-md shadow-sm hover:opacity-90 transition-opacity text-xs">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                                    <span>Download</span>
-                                </a>
-                            </td>
-                        </tr>
-                        <!-- Add more <tr> blocks here for new files -->
-                    </tbody>
-                </table>
+    <!-- Main Container -->
+    <div class="min-h-screen">
+        
+        <!-- Header Navigation -->
+        <header class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-start h-14">
+                    <!-- Logo and School Name -->
+                    <div class="flex items-center space-x-3">
+                        <div class="flex-shrink-0">
+                            <svg class="h-7 w-7 theme-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                            </svg>
+                        </div>
+                        <span class="text-lg font-bold text-slate-900 tracking-tight">JHCSC Repository</span>
+                    </div>
+                </div>
             </div>
-        </div>
-         <footer class="text-center mt-4">
-            <p class="text-xs text-gray-400">&copy; 2025 JHCSC BSIT-2B Files. All Rights Reserved.</p>
-        </footer>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+            
+            <!-- Page Title and Course Info -->
+            <div class="mb-6">
+                <h1 class="text-2xl font-extrabold text-slate-900">Modern History - Group 4</h1>
+                <p class="mt-1 text-sm text-slate-500">
+                    School: <span class="font-semibold text-slate-600">J.H. Cerilles State College</span> | A centralized hub for our group's project files.
+                </p>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 mb-4">
+                <div class="relative w-full sm:max-w-xs">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="h-4 w-4 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <input type="text" placeholder="Search files..." class="w-full pl-9 pr-3 py-1.5 border border-slate-300 rounded-md text-sm focus:ring-1 focus:ring-green-400 focus:border-green-500 transition">
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-medium text-slate-500">Sort by:</span>
+                    <select class="text-xs font-semibold border-slate-300 rounded-md py-1.5 focus:ring-1 focus:ring-green-400 focus:border-green-500 transition">
+                        <option>Date Added</option>
+                        <option>File Name</option>
+                        <option>File Size</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- File List - Compact Card Layout -->
+            <div class="space-y-3">
+
+                <!-- File Item 1: PPT Report -->
+                <div class="bg-white rounded-lg card-shadow transition-all-300 p-3">
+                    <div class="grid grid-cols-12 items-center gap-3">
+                        <!-- Icon -->
+                        <div class="col-span-2 sm:col-span-1 flex justify-center">
+                            <div class="bg-orange-100 text-orange-600 rounded-md p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2h6v4H7V5zm8 6H5v2h10v-2z" clip-rule="evenodd" /></svg>
+                            </div>
+                        </div>
+                        <!-- File Details -->
+                        <div class="col-span-10 sm:col-span-6 md:col-span-5">
+                            <p class="font-semibold text-sm text-slate-900 truncate">The American Revolution_Report.ppt</p>
+                            <p class="text-xs text-slate-500 mt-0.5 hidden md:block">Key points, visuals, and data for our group report.</p>
+                             <div class="mt-1.5 bg-yellow-100 border border-yellow-200 text-yellow-800 p-1.5 rounded-md text-xs flex items-start gap-1.5" role="alert">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 flex-shrink-0 mt-px"><path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm.75-10.25a.75.75 0 0 0-1.5 0v3.5a.75.75 0 0 0 1.5 0v-3.5ZM8 11a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" /></svg>
+                                <div><span class="font-bold">Note:</span> Differs from video presentation.</div>
+                            </div>
+                        </div>
+                        <!-- Date & Size -->
+                        <div class="hidden md:col-span-2 md:block text-xs text-slate-500 text-center">
+                           <p class="font-medium text-slate-700">Sep 15, 2025</p>
+                           <p>10:53 PM</p>
+                        </div>
+                        <div class="hidden sm:col-span-2 sm:block text-xs font-medium text-slate-700 text-center">
+                            15.2 MB
+                        </div>
+                        <!-- Actions -->
+                        <div class="col-span-12 sm:col-span-3 md:col-span-2 flex justify-end items-center gap-2 mt-2 sm:mt-0">
+                             <a href="#" class="inline-flex items-center gap-1.5 theme-bg text-white font-bold py-1.5 px-3 rounded-md shadow-sm hover:opacity-90 transition-opacity text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                <span>Download</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- File Item 2: DOCX Outline -->
+                <div class="bg-white rounded-lg card-shadow transition-all-300 p-3">
+                     <div class="grid grid-cols-12 items-center gap-3">
+                        <!-- Icon -->
+                        <div class="col-span-2 sm:col-span-1 flex justify-center">
+                            <div class="bg-blue-100 text-blue-600 rounded-md p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" /></svg>
+                            </div>
+                        </div>
+                        <!-- File Details -->
+                        <div class="col-span-10 sm:col-span-6 md:col-span-5">
+                            <p class="font-semibold text-sm text-slate-900 truncate">Project_Outline_v2.docx</p>
+                            <p class="text-xs text-slate-500 mt-0.5 hidden md:block">The initial outline and structural plan for the report.</p>
+                             <div class="mt-1.5 flex gap-2">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded-full">Approved</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">Outline</span>
+                            </div>
+                        </div>
+                        <!-- Date & Size -->
+                        <div class="hidden md:col-span-2 md:block text-xs text-slate-500 text-center">
+                           <p class="font-medium text-slate-700">Sep 12, 2025</p>
+                           <p>3:15 PM</p>
+                        </div>
+                        <div class="hidden sm:col-span-2 sm:block text-xs font-medium text-slate-700 text-center">
+                            128 KB
+                        </div>
+                        <!-- Actions -->
+                        <div class="col-span-12 sm:col-span-3 md:col-span-2 flex justify-end items-center gap-2 mt-2 sm:mt-0">
+                             <a href="#" class="inline-flex items-center gap-1.5 theme-bg text-white font-bold py-1.5 px-3 rounded-md shadow-sm hover:opacity-90 transition-opacity text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                <span>Download</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- File Item 3: PDF Sources -->
+                <div class="bg-white rounded-lg card-shadow transition-all-300 p-3">
+                     <div class="grid grid-cols-12 items-center gap-3">
+                        <!-- Icon -->
+                        <div class="col-span-2 sm:col-span-1 flex justify-center">
+                            <div class="bg-red-100 text-red-600 rounded-md p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5 2a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V4a2 2 0 00-2-2H5zm0 2h10v12H5V4zm2 4a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1zm0 4a1 1 0 110-2h4a1 1 0 110 2H7z" clip-rule="evenodd" /></svg>
+                            </div>
+                        </div>
+                        <!-- File Details -->
+                        <div class="col-span-10 sm:col-span-6 md:col-span-5">
+                            <p class="font-semibold text-sm text-slate-900 truncate">Research_Sources_Combined.pdf</p>
+                            <p class="text-xs text-slate-500 mt-0.5 hidden md:block">All primary and secondary sources for citations.</p>
+                             <div class="mt-1.5 flex gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2 py-0.5 rounded-full">Archive</span>
+                            </div>
+                        </div>
+                        <!-- Date & Size -->
+                        <div class="hidden md:col-span-2 md:block text-xs text-slate-500 text-center">
+                           <p class="font-medium text-slate-700">Sep 10, 2025</p>
+                           <p>11:00 AM</p>
+                        </div>
+                        <div class="hidden sm:col-span-2 sm:block text-xs font-medium text-slate-700 text-center">
+                            5.8 MB
+                        </div>
+                        <!-- Actions -->
+                        <div class="col-span-12 sm:col-span-3 md:col-span-2 flex justify-end items-center gap-2 mt-2 sm:mt-0">
+                             <a href="#" class="inline-flex items-center gap-1.5 theme-bg text-white font-bold py-1.5 px-3 rounded-md shadow-sm hover:opacity-90 transition-opacity text-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                <span>Download</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </main>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
+            <p>&copy; 2025 JHCSC BSIT-2B Group 4 Files. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
 
