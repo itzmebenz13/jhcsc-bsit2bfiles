@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHCSC - Class File Repository</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .theme-bg {
+            background-color: #05A65A;
+        }
+        .theme-text {
+            color: #05A65A;
+        }
+        tbody td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+
+    <div class="w-full max-w-5xl mx-auto">
+        <!-- Header -->
+        <div class="mb-4">
+            <h1 class="text-2xl font-bold text-gray-800">JHCSC File Repository</h1>
+            <p class="text-sm text-gray-500">
+                <span class="font-semibold">School:</span> J.H. Cerilles State College | 
+                <span class="font-semibold">Subject:</span> Modern History - Group 4
+            </p>
+        </div>
+
+        <!-- File Log Table Container -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-600">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 border-b">
+                        <tr>
+                            <th scope="col" class="px-4 py-2">
+                                File Details
+                            </th>
+                            <th scope="col" class="px-4 py-2">
+                                Date Added
+                            </th>
+                            <th scope="col" class="px-4 py-2 text-center">
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y">
+                        <!-- File Item 1: PPT Report -->
+                        <tr class="bg-white hover:bg-gray-50 transition-colors">
+                            <td class="px-4 py-3">
+                                <div class="flex items-start gap-3">
+                                    <div class="flex-shrink-0 mt-0.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2h6v4H7V5zm8 6H5v2h10v-2z" clip-rule="evenodd" /></svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-sm text-gray-900">The American Revolution_Report.ppt</p>
+                                        <p class="text-xs text-gray-500 mt-1">Key points, visuals, and data from our group report.</p>
+                                        <!-- Notice -->
+                                        <div class="mt-2 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-1.5 rounded-r-md text-xs" role="alert">
+                                            <span class="font-semibold">Note:</span> Differs from the video presentation.
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-4 py-3 text-xs font-medium text-gray-600">
+                                Sep 15, 2025
+                                <span class="block text-gray-400">10:53 PM</span>
+                            </td>
+                            <td class="px-4 py-3 text-center">
+                                <a href="https://example.com" target="_blank" class="inline-flex items-center gap-1.5 theme-bg text-white font-bold py-1.5 px-3 rounded-md shadow-sm hover:opacity-90 transition-opacity text-xs">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                    <span>Download</span>
+                                </a>
+                            </td>
+                        </tr>
+
+                        <!-- File Item 2: DOCX Outline -->
+                         <tr class="bg-white hover:bg-gray-50 transition-colors">
+                            <td class="px-4 py-3">
+                                <div class="flex items-start gap-3">
+                                    <div class="flex-shrink-0 mt-0.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" /></svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-sm text-gray-900">Project_Outline.docx</p>
+                                        <p class="text-xs text-gray-500 mt-1">The initial outline and structural plan for the group report.</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-4 py-3 text-xs font-medium text-gray-600">
+                                Sep 12, 2025
+                                <span class="block text-gray-400">3:15 PM</span>
+                            </td>
+                            <td class="px-4 py-3 text-center">
+                                <a href="https://example.com" target="_blank" class="inline-flex items-center gap-1.5 theme-bg text-white font-bold py-1.5 px-3 rounded-md shadow-sm hover:opacity-90 transition-opacity text-xs">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                    <span>Download</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <!-- Add more <tr> blocks here for new files -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+         <footer class="text-center mt-4">
+            <p class="text-xs text-gray-400">&copy; 2025 JHCSC BSIT-2B Files. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
